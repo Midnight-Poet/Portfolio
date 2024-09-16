@@ -19,7 +19,7 @@
             <div></div>
             <div></div>
         </button>
-        <nav>
+        <nav class="nav">
             <ul>
                 <li>home</li>
                 <li>skills</li>
@@ -124,17 +124,19 @@
             <header>
                 Projects
             </header>
+            <button class="prev-btn"></button>
+            <button class="nxt-btn"></button>
             <div class="slide">
-                <div>
+                <div class="slide-content">
                     <img src="./img1.jpg" alt="">
                 </div>
-                <div>
+                <div class="slide-content">
                     <img src="./img2.jpg" alt="">
                 </div>
-                <div>
+                <div class="slide-content">
                     <img src="./img3.jpg" alt="">
                 </div>
-                <div>
+                <div class="slide-content">
                     <img src="./img4.jpg" alt="">
                 </div>
             </div>
@@ -182,9 +184,18 @@
             </div>
             <div class="form">
                 <form action="">
-                    <input type="text" placeholder="NAME">
-                    <input type="email" name="" id="" placeholder="EMAIL">
-                    <textarea name="" id="" placeholder="Your Message"></textarea>
+                    <div class="input">
+                        <input type="text" value="">
+                        <label>name</label>
+                    </div>
+                    <div class="input">
+                        <input type="email" name="" id="" value="">
+                        <label>email</label>
+                    </div>
+                    <div class="input">
+                        <textarea name="" id="" value=""></textarea>
+                        <label>your message</label>
+                    </div>
                     <button>Submit</button>
                 </form>
             </div>
@@ -206,5 +217,8 @@
             </div>
         </div>
     </footer>
+
+
+    <script src="./script.js"></script>
 </body>
 </html>

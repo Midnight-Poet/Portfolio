@@ -7,8 +7,12 @@ body {
     color: white;
     font-family: "Space Mono", monospace;
 }
+a {
+    color: #9e9e9e;
+    text-decoration: none;
+}
 header {
-    color: grey;
+    color: #9e9e9e;
     line-height: 50px;
     text-transform: capitalize;
 }
@@ -19,17 +23,19 @@ header::after {
     content: '>';
 }
 h4 {
-    font-size: 35px;
+    color: rgb(209, 205, 205);
+    font-size: 30px;
     margin: 25px 0;
 }
 button {
     margin: 30px 0;
     padding: 5px 25px;
     font-size: 15px;
+    font-weight: 100;
     text-transform: capitalize;
-    color: white;
+    color: #9e9e9e;
     background: none;
-    border: 2px solid white;
+    border: 1px solid #9e9e9e;
     cursor: pointer;
 }
 button:hover {
@@ -40,17 +46,17 @@ ul {
     color: rgb(175, 175, 175);
 }
 p {
-    color: grey;
+    color: #9e9e9e;
     line-height: 30px;
-    font-size: 20px;
+    font-size: 16px;
 }
 h5 {
+    color: grey;
     font-size: 18px;
     line-height: 50px;
     text-transform: capitalize;
 }
 .navbar {
-    background-color: #ffff;
     width: 100%;
 }
 .navbar .top-bar {
@@ -58,11 +64,12 @@ h5 {
     background-color: #000000d5;
     backdrop-filter: blur(5px);
     padding: 10px;
-    height: fit-content;
     position: fixed;
+    top: 0;
     z-index: 1000;
 }
 .navbar .menu-bar{
+    padding: 0;
     margin: 0;
     height: fit-content;
     width: fit-content;
@@ -73,7 +80,7 @@ h5 {
 .navbar .menu-bar div {
     width: 25px;
     height: 3px;
-    background-color: white;
+    background-color: grey;
     margin-top: 5px;
 }
 .active div:first-child {
@@ -124,6 +131,9 @@ nav ul {
     line-height: 70px;
     text-align: center;
 }
+nav ul div {
+    display: none;
+}
 nav ul li:hover {
     color: white;
     transition: .3s ease-in-out;
@@ -169,23 +179,22 @@ nav ul li:hover {
 .skills .advantages .div .sub-divs {
     width: 25%;
     padding: 20px;
-    border: 2px solid white;
+    border: 1px solid #9e9e9e;
     text-align: center;
 }
 .skills .advantages .div .sub-divs i {
     font-size: 25px;
+    color: #ebe6e6;
 }
 .skills .advantages div .sub-divs h5 {
+    color: #ebe6e6;
     font-size: 20px;
     line-height: 50px;
 }
 .skills p {
-    color: grey;
-    line-height: 30px;
-    font-size: 16px;
-}
-.skills p i {
-    color: whitesmoke;
+    color: #9e9e9e;
+    line-height: 20px;
+    font-size: 15px;
 }
 
 
@@ -295,13 +304,13 @@ nav ul li:hover {
     color: white;
     width: 100%;
     margin: 10px 0;
-    border: 1px solid grey;
-    border-color: transparent transparent grey transparent ;
+    border: 1px solid #9e9e9e;
+    border-color: transparent transparent #9e9e9e transparent ;
     background: none;
     padding: 10px 0;
 }
 .contact .text .form form .input label{
-    color: grey;
+    color: #9e9e9e;
     position: absolute;
     top: 30%;
     text-transform: uppercase;
@@ -348,12 +357,12 @@ footer a {
     margin-right: 10px;
 }
 
-@media only screen and (max-width: 800px) { 
+@media only screen and (max-width: 900px) { 
     .about .text {
         flex-direction: column-reverse;
     }
     .about .text .img {
-        width: 100%;
+        display: none;
     }
     .skills .advantages .div {
         flex-direction: column;
@@ -370,7 +379,7 @@ footer a {
         width: 100%;
     }
     .projects .text .img {
-        width: 100%;
+        display: none;
     }
     .projects .slide-content{
         display: none;
@@ -391,14 +400,45 @@ footer a {
 }
 
 @media only screen and (max-width: 550px) {
+    body {
+        overflow-x: hidden;
+    }
     .about, .projects, .skills, .contact {
-        padding: 5%;
+        padding: 10% 3%;
+        margin-top: 25%;
+    }
+    header {
+        line-height: 40px;
+    }
+    p {
+        line-height: 20px;
+        font-size: 16px;
+    }
+    button {
+        margin: 5px 0;
     }
     h4 {
-        font-size: 25px;
+        font-size: 20px;
+        line-height: auto;
+    }
+    .navbar .top-bar {
+        padding: 10px;
+    }
+    nav ul {
+        font-size: 20px;
+    }
+    nav ul div {
+        display: block;
+    }
+    nav ul div:last-child {
+        position: absolute;
+        bottom: 0;
     }
     .about .text .txt {
-        padding: 15px;
+        padding: 0px;
+    }
+    .skills ul li {
+        font-size: 12px;
     }
     .projects {
         padding: 15px;

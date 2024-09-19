@@ -80,7 +80,7 @@ h5 {
 .navbar .menu-bar div {
     width: 25px;
     height: 3px;
-    background-color: grey;
+    background-color: white;
     margin-top: 5px;
 }
 .active div:first-child {

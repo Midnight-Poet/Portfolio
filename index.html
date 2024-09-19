@@ -14,11 +14,13 @@
 </head>
 <body>
     <div class="navbar">
-        <button class="menu-bar">
-            <div></div>
-            <div></div>
-            <div></div>
-        </button>
+        <div class="top-bar">
+            <button class="menu-bar">
+                <div></div>
+                <div></div>
+                <div></div>
+            </button>
+        </div>
         <nav class="nav">
             <ul>
                 <li>home</li>
@@ -86,7 +88,7 @@
             </header>
             <div class="div">
                 <div class="sub-divs">
-                    <i></i>
+                    <i class="fa-light fa-people-arrows"></i>
                     <h5>Communication</h5>
                     <p>
                         I quickly reply to your messages during our work
@@ -95,7 +97,7 @@
                     </p>
                 </div>
                 <div class="sub-divs">
-                    <i></i>
+                    <i class="fa-light fa-user-tie"></i>
                     <h5>Business awareness</h5>
                     <p>
                         Immersing in user business model. i can realize a 
@@ -104,7 +106,7 @@
                     </p>
                 </div>
                 <div class="sub-divs">
-                    <i></i>
+                    <i class="fa-light fa-shield-exclamation"></i>
                     <h5>Privacy</h5>
                     <p>
                         Some projects have unique properties that shouldn't
@@ -114,7 +116,8 @@
             </div>
         </div>
         <p>
-            <i></i>I guarantee the confidentiality of the product, which can
+            <i class="fa-light fa-file-magnifying-glass"></i>
+            I guarantee the confidentiality of the product, which can
             be confirmed by a NDA agreement.
         </p>
     </div>
@@ -124,8 +127,8 @@
             <header>
                 Projects
             </header>
-            <button class="prev-btn"></button>
-            <button class="nxt-btn"></button>
+            <button class="nxt-btn fa-regular fa-arrow-right"></button>
+            <button class="prev-btn fa-regular fa-arrow-left"></button>
             <div class="slide">
                 <div class="slide-content">
                     <img src="./img1.jpg" alt="">
@@ -185,15 +188,15 @@
             <div class="form">
                 <form action="">
                     <div class="input">
-                        <input type="text" value="">
-                        <label>name</label>
+                        <input type="text" value="" required>
+                        <label for="name">name</label>
                     </div>
                     <div class="input">
-                        <input type="email" name="" id="" value="">
+                        <input type="text" name="" id="" value=""required="">
                         <label>email</label>
                     </div>
                     <div class="input">
-                        <textarea name="" id="" value=""></textarea>
+                        <textarea name="" id="" value="" required></textarea>
                         <label>your message</label>
                     </div>
                     <button>Submit</button>

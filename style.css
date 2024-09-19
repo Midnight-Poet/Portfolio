@@ -49,10 +49,23 @@ h5 {
     line-height: 50px;
     text-transform: capitalize;
 }
-.navbar .menu-bar{
+.navbar {
+    background-color: #ffff;
+    width: 100%;
+}
+.navbar .top-bar {
+    width: 100%;
+    background-color: #000000d5;
+    backdrop-filter: blur(5px);
+    padding: 10px;
+    height: fit-content;
     position: fixed;
     z-index: 1000;
-    margin: 20px;
+}
+.navbar .menu-bar{
+    margin: 0;
+    height: fit-content;
+    width: fit-content;
     border: none;
     background: none;
     cursor: pointer;
@@ -85,7 +98,7 @@ nav {
     text-align: center;
     top: 0;
     z-index: 55;
-    height: 100vh;
+    height: 100%;
     justify-content: center;
     align-items: center;
 }
@@ -119,9 +132,7 @@ nav ul li:hover {
 
 
 .about {
-    height: 55vh;
     padding: 10%;
-    /* line-height: 50px; */
 }
 .about .text {
     display: flex;
@@ -161,6 +172,9 @@ nav ul li:hover {
     border: 2px solid white;
     text-align: center;
 }
+.skills .advantages .div .sub-divs i {
+    font-size: 25px;
+}
 .skills .advantages div .sub-divs h5 {
     font-size: 20px;
     line-height: 50px;
@@ -170,43 +184,76 @@ nav ul li:hover {
     line-height: 30px;
     font-size: 16px;
 }
+.skills p i {
+    color: whitesmoke;
+}
 
 
 .projects .first-sec{
     padding: 10%;
-}
-.projects .slide {
     position: relative;
-    padding: 25px;
+}
+.projects .first-sec header {
+    text-align: center;
+}
+    .projects .slide {
+    position: relative;
     width: 100%;
     display: flex;
     gap: 2%;
     flex-direction: row;
     overflow: hidden;
 }
-.projects .slide div {
+.projects .slide .slide-content {
     display: none;
 }
 .projects .slide div:nth-child(1) {
+    animation: pop .4s ease-in-out forwards;
     display: block;
+}
+
+@keyframes pop {
+    from {
+        /* filter: blur(33px); */
+        transform: translate(200px, 0);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0);
+        opacity: 1;
+    }
 }
 .projects .slide div:nth-child(2) {
+    animation: pop1 .6s ease-in-out forwards;
     display: block;
 }
-.projects .slide div img {
-    width: 550px;
+@keyframes pop1 {
+    from {
+        /* filter: blur(33px); */
+        transform: translate(200px, 0);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0);
+        opacity: 1;
+    }
 }
-.projects .slide button {
+.projects .slide div img {
+    width: 40vw;
+}
+.projects .first-sec button {
+    z-index: 5;
+    top: 45%;
     position: absolute;
     height: fit-content;
     width: fit-content;
+    padding: 5px;
 }
-.projects .slide button:nth-child(1) {
-    top: 33%;
+.projects .first-sec button:nth-child(3) {
+    left: 7.5%;
 }
-.projects .slide button:nth-child(2) {
-    right: 0;
-    top: 33%;
+.projects .first-sec button:nth-child(2) {
+    right: 7.5%;
 }
 .projects .text {
     padding: 10%;
@@ -256,20 +303,31 @@ nav ul li:hover {
 .contact .text .form form .input label{
     color: grey;
     position: absolute;
-    top: 10%;
+    top: 30%;
     text-transform: uppercase;
-    font-size: 11px;
+    font-size: 16px;
     transition: 1s;
+}
+.contact .text .form .input input:focus ~label,
+.contact .text .form .input input:valid ~label {
+    top: 10%;
+    font-size: 11px;
+}
+.contact .text .form .input textarea:focus ~label,
+.contact .text .form .input textarea:valid ~label {
+    top: 10%;
+    font-size: 11px;
 }
 .contact .text .form form input, textarea:focus {
     outline: none;
 }
 .contact .text .form form button {
     width: 40%;
-    margin-left: 65%;
+    margin-left: 60%;
 }
 footer {
     position: fixed;
+    z-index: 3;
     bottom: 0;
     background-color: #1414149f;
     width: 100%;
@@ -288,4 +346,66 @@ footer a {
 }
 .footer .left a {
     margin-right: 10px;
+}
+
+@media only screen and (max-width: 800px) { 
+    .about .text {
+        flex-direction: column-reverse;
+    }
+    .about .text .img {
+        width: 100%;
+    }
+    .skills .advantages .div {
+        flex-direction: column;
+        width: 100%;
+    }
+    .skills .advantages .div .sub-divs {
+        width: 90%;
+        margin-top: 20px;
+    }
+    .projects .text {
+        flex-direction: column-reverse;
+    } 
+    .projects .text .txt {
+        width: 100%;
+    }
+    .projects .text .img {
+        width: 100%;
+    }
+    .projects .slide-content{
+        display: none;
+    }
+    .projects .slide .slide-content img {
+        width: 90vw;
+    }
+    .contact .text {
+        flex-direction: column;
+    }
+    .contact .text .txt {
+        width: 100%;
+    }
+    .contact .text .form {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .about, .projects, .skills, .contact {
+        padding: 5%;
+    }
+    h4 {
+        font-size: 25px;
+    }
+    .about .text .txt {
+        padding: 15px;
+    }
+    .projects {
+        padding: 15px;
+    }
+    .projects .text {
+        padding: 15px;
+    }
+    .projects .first-sec {
+        padding: 5%;
+    }
 }
